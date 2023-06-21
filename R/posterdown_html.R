@@ -38,3 +38,14 @@ posterdown_betterport <- function(...,
                                   css = NULL) {
   pagedown::poster_relaxed(..., css = css, template = template)
 }
+
+#' @description The output format `atsdr_betterport()` mimics the style of the
+#' BetterPoster movement from twitter.
+#' @rdname posterdown_html
+#' @export
+atsdrdown_betterport <- function(...,
+                                  template = find_resource("atsdr_betterport", "template.html"),
+                                  css = NULL) {
+  pagedown::poster_relaxed(..., css = css, template = template)
+}
+

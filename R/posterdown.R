@@ -10,6 +10,8 @@
 #' Creates an R Markdown template for a PDF poster document via HTML
 #' @section poster_betterport:
 #' Creates an R Markdown template for a PDF poster document via HTML
+#' @section atsdrdown_betterport:
+#' Creates an R Markdown template for a PDF poster document via HTML
 #' @docType package
 #' @name posterdown
 NULL
