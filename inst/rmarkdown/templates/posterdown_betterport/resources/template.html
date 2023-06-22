@@ -70,7 +70,7 @@ position: sticky;
 width: 100%;
 }
 pre.sourceCode.r, pre.sourceCode.python {
-background-color: #ffffff20;
+background-color: #ffffff;
 border: solid $if(secondary_colour)$$secondary_colour$$else$#005CA8$endif$ 1mm;
 border-radius: 0.5em;
 padding: 4mm;
@@ -105,13 +105,8 @@ font-size: $if(caption_textsize)$$caption_textsize$$else$20pt$endif$;
 font-style: italic;
 }
 
-tbody tr:nth-child(even) {
-    background-color: $if(secondary_colour)$$secondary_colour$$else$#005CA8$endif$20;
-    color: #000000;
-}
 tbody tr:nth-child(odd) {
-    background-color: $if(secondary_colour)$$secondary_colour$$else$#005CA8$endif$20;
-    color: #000000;
+    background-color: $if(secondary_colour)$$secondary_colour$$else$#008080$endif$20;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
   border-spacing: 0;
@@ -122,7 +117,6 @@ tbody tr:nth-child(odd) {
   padding-right: 1em;
   padding-left: 1em;
   line-height: 1em;
-  color: #000000;
 }
 table {
   margin: auto;
@@ -130,7 +124,6 @@ table {
 th {
   padding-left: 5mm;
   padding-right: 5mm;
-  color: #000000;
 }
 .caption {
 font-size: $if(caption_textsize)$$caption_textsize$$else$20pt$endif$;
@@ -182,7 +175,7 @@ text-decoration: none;
 color: $if(secondary_colour)$$secondary_colour$$else$#005CA8$endif$;
 }
 #title {
-font-size: $if(title_textsize)$$title_textsize$$else$125pt$endif$;
+font-size: $if(title_textsize)$$title_textsize$$else$43pt$endif$;
 text-align: left;
 margin: 0;
 line-height: 98%;
@@ -190,6 +183,111 @@ border-bottom: 0;
 font-weight: normal;
 background: 0;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 11% 0.1% 88.9%;
+    background-color: #fff;
+    color: #444;
+  }
+
+  .box {
+    background-color: #005CA8;
+    color: #ffffff ;
+    padding: 10px;
+    font-size: 150%;
+
+  }
+
+  .a {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    display: inline-block;
+    font-family: "Calibri";
+    font-size: 32pt;
+    background-color: #005CA8;
+    color: #ffffff;
+    line-height: 2;
+    text-align: left;
+  }
+  .b {
+    grid-column: 3 / 3 ;
+    grid-row: 1 / 2;
+    background-color: #005CA8;
+    color: #ffffff;
+  }
+  .c {
+    grid-column: 3 / 3 ;
+    grid-row: 2 ;
+    background-color: #005CA8;
+    color: #ffffff;
+  }
+
+
+
+.wrapper1 {
+    display: grid;
+    grid-template-columns: 15% 5% 12% 38% 15% 10%;
+    background-color: #411F20;
+    color: #ffffff;
+  }
+
+
+
+
+  .a1 {
+    grid-column: 1 ;
+    grid-row: 1 ;
+    display: inline-block;
+    font-family: "Calibri";
+    font-size: 32pt;
+    background-color: #411F20;
+    color: #ffffff;
+    line-height: 2;
+    text-align: left;
+  }
+  .b1 {
+    grid-column: 2  ;
+    grid-row: 1;
+    background-color: #411F20;
+    color: #ffffff;
+    align-content: space-around;
+  }
+  .c1 {
+    grid-column: 3  ;
+    grid-row:  1 ;
+    background-color: #411F20;
+    color: #ffffff;
+    align-content: left
+    font-size: 18pt;
+    text-align: left;
+  }
+
+    .d1 {
+    grid-column: 4  ;
+    grid-row: 1 ;
+    background-color: #411F20;
+    color: #ffffff;
+  }
+
+      .e1 {
+    grid-column: 5  ;
+    grid-row: 1 ;
+    background-color: #411F20;
+    color: #ffffff;
+
+  }
+
+
+      .f1 {
+    grid-column: 6  ;
+    grid-row: 1 ;
+    background-color: #411F20;
+    color: #ffffff;
+    text-align: left;
+  }
+
+
 #demobox {
   background-color: #005CA8 ;
   color: #ffffff;
@@ -200,9 +298,6 @@ background: 0;
 
 #author {
 color:$if(author_textcol)$$author_textcol$$else$$if(primary_colour)$$primary_colour$$else$#0b4545$endif$$endif$;
-margin: 0;
-line-height: 85%;
-font-size: $if(author_textsize)$$author_textsize$$else$1.17em$endif$;
 }
 #affiliation {
 padding-top: 0.1em;
@@ -229,6 +324,7 @@ margin: 0;
 line-height: 85%;
 font-size: $if(authorextra_textsize)$$authorextra_textsize$$else$35px$endif$;
 text-align: left;
+color: #ffffff;
 }
 .outer h1, h2, h3, h4, h5, h6 {
 text-align: center;
@@ -238,7 +334,6 @@ font-weight: bold;
 .section h1 {
   text-align:center;
   padding-bottom:5px;
-  font-size: 42.7pt;
   background:
     linear-gradient(
       to left,
@@ -260,6 +355,7 @@ font-weight: bold;
 }
 .outer h2 {
 text-align: center;
+color:#006A71;
 }
 .outer p, .level2 {
 color: $if(body_textcol)$$body_textcol$$else$#000000$endif$;
@@ -273,10 +369,10 @@ text-align: left;
 width: $if(poster_width)$$poster_width$$else$36in$endif$;
 height: calc($if(poster_height)$$poster_height$$else$48in$endif$ * $if(main_topsize)$$main_topsize$$else$0.25$endif$);
 position: absolute;
-background-color: $if(primary_colour)$$primary_colour$$else$#0b4545$endif$;
-color: $if(main_textcol)$$main_textcol$$else$#ffffff$endif$$if(main_textalpha)$$main_textalpha$$else$90$endif$;
+background-color: $if(primary_colour)$$primary_colour$$else$#789E91$endif$;
+color: $if(main_textcol)$$main_textcol$$else$#789E91$endif$$if(main_textalpha)$$main_textalpha$$else$90$endif$;
 font-family: $if(main_fontfamily)$$main_fontfamily$$else$Special Elite$endif$;
-background-image: linear-gradient($if(primary_colour)$$primary_colour$$else$#005CA8$endif$ 50%,$if(secondary_colour)$$secondary_colour$$else$#005CA8$endif$);
+background-image: linear-gradient($if(primary_colour)$$primary_colour$$else$#789E91$endif$ 50%,$if(secondary_colour)$$secondary_colour$$else$#789E91$endif$);
 }
 .main_message {
 position: absolute;
@@ -299,10 +395,8 @@ color: $if(main_textcol)$$main_textcol$$else$#ffffff$endif$;
 color: $if(main_textcol)$$main_textcol$$else$#ffffff$endif$$if(main_textalpha)$$main_textalpha$$else$90$endif$;
 }
 #main-img-left {
-width: 10%;
-left: 0.5in;
-bottom: 0.2in;
-position: absolute;
+
+width: 80%;
 }
 #main-img-center {
 width: 10%;
@@ -311,10 +405,15 @@ bottom: 0.5in;
 position: absolute;
 }
 #main-img-right {
-width: 10%;
-right: 0.5in;
-bottom: 0.2in;
-position: absolute;
+width: 120%;
+}
+
+#funnycolors {
+width: 36in;
+}
+
+#tricorder {
+  height: 20%;
 }
 .main p {
 font-size: $if(main_textsize)$$main_textsize$$else$150px$endif$;
@@ -363,15 +462,19 @@ padding: 0cm;
 }
 .main_bottom {
 width: $if(poster_width)$$poster_width$$else$36in$endif$;
-height: calc($if(poster_height)$$poster_height$$else$48in$endif$ * $if(main_bottomsize)$$main_bottomsize$$else$0.1$endif$);
-margin-top: calc($if(poster_height)$$poster_height$$else$48in$endif$ * $if(main_bottomsize)$(1 - $main_bottomsize$)$else$0.9$endif$);
+height: calc($if(poster_height)$$poster_height$$else$48in$endif$ * $if(main_bottomsize)$$main_bottomsize$$else$0.05$endif$);
+margin-top: calc($if(poster_height)$$poster_height$$else$48in$endif$ * $if(main_bottomsize)$(1 - $main_bottomsize$)$else$0.90$endif$);
 position: absolute;
 background-color: $if(primary_colour)$$primary_colour$$else$#0b4545$endif$;
 background-image: linear-gradient($if(secondary_colour)$$secondary_colour$$else$#411F20$endif$ 10%, $if(primary_colour)$$primary_colour$$else$#411F20$endif$);
 }
+
+
+
 .section {
   padding-left: $if(column_padding)$$column_padding$$else$10mm$endif$;
   padding-right: $if(column_padding)$$column_padding$$else$10mm$endif$;
+  color: #006A71;
 }
 span > #tab:mytable {
   font-weight: bold;
@@ -396,6 +499,7 @@ span > #tab:mytable {
   margin-top: -1mm;
   margin-right: -1mm;
   margin-left: -1mm;
+  color: #006A71;
 }
 .emphasis blockquote {
   border: 0;
@@ -448,11 +552,28 @@ $endfor$
 <div class="poster_wrap">
 <div id="demobox">
 <img id="top-main-image" src=$if(top_main_image)$$top_main_image$$else$$endif$>
-<div style="width:100%">
-<div class="nextto">AGENCY FOR TOXIC SUBSTANCES AND DISEASE REGISTRY</div>
-<div class="nextto2">$if(title)$<h1 id="title">$title$</h1>$else$$endif$</div>
-</div>
 
+<div class="wrapper">
+  <div class="box a">AGENCY FOR TOXIC SUBSTANCES AND DISEASE REGISTRY</div>
+  <div class="box b">$if(title)$<h1 id="title">$title$</h1>$else$$endif$</div>
+  <div class="box c">$if(author)$
+<h5 id="author_extra", class="author_extra">
+$for(author)$
+$if(author.main)$
+$else$
+$author.name$<sup>$author.affil$$if(author.orcid)$, <a class="orcid" href="https://orcid.org/$author.orcid$"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a>$else$$endif$</sup>
+$endif$
+$sep$ $endfor$
+</h5>
+$else$$endif$
+
+$if(affiliation)$
+<p id="affiliation" class="affiliation">
+$for(affiliation)$<sup>$affiliation.num$</sup> $affiliation.address$$sep$<br> $endfor$
+</p>
+$else$$endif$
+</div>
+</div>
 
 <div class="column outer">
 <div class="section">
@@ -495,7 +616,6 @@ $body$
 
 </div>
 <div class="main">
-<img id="top-main-image" src=$if(top_main_image)$$top_main_image$$else$$endif$>
 <p>$for(main_findings)$$main_findings$$sep$<br><br> $endfor$</p>
 </div>
 <div class="main_message">
@@ -503,11 +623,16 @@ $body$
 </div>
 
 <div class="main_bottom">
-<img id="main-img-left" src=$if(logoleft_name)$$logoleft_name$$else$$endif$>
-<img id="main-img-center" src=$if(logocenter_name)$$logocenter_name$$else$$endif$>
-<img id="main-img-right" src=$if(logoright_name)$$logoright_name$$else$$endif$>
+  <div class="wrapper1">
+  <div class="box a1"><img id="main-img-left" src=$if(logoleft_name)$$logoleft_name$$else$$endif$></div>
+  <div class="box b1"><img id="tricorder" src="./images/tricorder.png"></div>
+  <div class="box c1">SCAN HERE FOR MORE INFORMATION</div>
+  <div class="box d1"></div>
+  <div class="box e1">CONTACT INFO<br><small>James T. Durant <br><a class='envelope'><i class="fas fa-envelope"></i></a> hzd3@cdc.gov</small></div>
+  <div class="box f1"><img id="main-img-right" src="./image/ATSDR.png"></div></div>
+<img id = "funnycolors" src="./image/funnycolors.png">
 </div>
-</div>
+
 
 $if(math)$
 <!-- dynamically load mathjax for compatibility with self-contained -->
